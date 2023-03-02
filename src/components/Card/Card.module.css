@@ -1,0 +1,45 @@
+.container { 
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 5px;
+    width: 178px;
+    padding: 10px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+.image { 
+    width: 178px;
+    padding: 10px;
+    
+}
+.button { 
+   display: flex;
+   justify-content: flex-end;
+}
+.button button{ 
+    background-color: red;
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+}
+.dataContainer{ 
+    text-align: center;
+    padding: 10px;
+    
+}
+.dataContainer h2 { 
+    margin: 2px;
+    font-size: 18px;
+    color: grey;
+
+}
+.dataContainer h3 { 
+    margin: 2px;
+    font-size: 16px;
+    color: grey;
+
+}
+.dataContainer h4{ 
+    margin: 2px;
+    font-size: 16px;
+    color: grey;
+}
