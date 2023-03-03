@@ -3,6 +3,9 @@ import './App.css';
 
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx'; 
+import { Routes, Route, RouterProvider } from 'react-router-dom';
+import About from './components/About/About.jsx';
+import Detail from './components/Detail/Detail';
 
 
 function App () {
@@ -24,18 +27,17 @@ const onClose = (id) =>{
 }
   return (
     <div className='App' style={{ padding: '25px' }}>
-     <div>
-       <NavBar onSearch={onSearch}/>
-      </div>
-      <hr />
-      <div>
-        <Cards characters={characters} onClose={onClose}
-        />
-      </div>
-      <hr />
-      
+      <NavBar onSearch={onSearch}/>
+      <hr/>
+    <Routes>
+      <Route path="/about" element={<About />}/>
+      <Route path="/home" element={ 
+        <Cards characters={characters} onClose={onClose}/>
+      }/>
+      <Route path='/Detail/:detailId' element={<Detail />}/>
+    </Routes>
     </div>
-  )
+  );
 }
 
 export default App
